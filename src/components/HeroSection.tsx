@@ -4,6 +4,8 @@ import { siteConfig } from '../config/siteConfig';
 import { HERO_BENEFITS, VIDEO_PROCESS_LIST } from '../data/courseContent';
 import { PurchaseButton } from './PurchaseButton';
 import { EditorialImage } from './EditorialImage';
+import { PricingTiers } from './PricingTiers';
+import { ScarcityCounter } from './ScarcityCounter';
 
 interface HeroSectionProps {
   onUnconfiguredCheckout: () => void;
@@ -68,9 +70,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   };
 
   const containerAspectClass =
-    parsedVideo.type === 'vimeo'
-      ? 'relative w-full pt-[42.86%] bg-[#4B0F21]'
-      : 'relative aspect-video w-full bg-[#4B0F21]';
+    'relative w-full aspect-video min-h-[240px] sm:min-h-0 bg-[#1A080E]';
 
   return (
     <section
@@ -108,15 +108,17 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         {/* Centerpiece Video Container with Burgundy Info Strip Above */}
         <div
           id="demostracion"
-          className="max-w-[920px] mx-auto rounded-lg overflow-hidden border border-[#DEC9A8] bg-[#FFFFFF] shadow-sm mb-9"
+          className="-mx-3 sm:mx-auto max-w-[960px] rounded-lg overflow-hidden border border-[#DEC9A8] bg-[#FFFFFF] shadow-sm mb-9"
         >
           {/* Burgundy Informational Bar Above Video */}
-          <div className="bg-[#64162D] text-[#FFFFFF] px-5 py-3.5 text-center">
-            <p className="text-xs sm:text-sm font-semibold tracking-[0.04em]">
-              <span className="text-[#DEC9A8] uppercase tracking-[0.1em] mr-2">
+          <div className="bg-[#64162D] text-[#FFFFFF] px-3 py-2 sm:px-5 sm:py-3 text-center">
+            <p className="text-[11px] sm:text-sm font-semibold tracking-[0.02em] leading-snug">
+              <span className="block sm:inline text-[10px] sm:text-xs text-[#DEC9A8] uppercase tracking-[0.08em] sm:mr-2">
                 Una mirada al interior de las clases:
               </span>
-              Observa la técnica. Comprende el proceso.
+              <span className="block sm:inline">
+                Observa la técnica. Comprende el proceso.
+              </span>
             </p>
           </div>
 
@@ -249,11 +251,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           </div>
         </div>
 
-        {/* Centered Price + Coral Primary CTA + Immediate Benefits Below Video */}
+        {/* Centered Price + Batch Roadmap + Coral Primary CTA + Scarcity Counter Below Video */}
         <div className="max-w-3xl mx-auto text-center">
-          <div className="mb-6">
+          <div className="mb-5">
             <p className="text-xs font-bold tracking-[0.14em] uppercase text-[#9A7A4C] mb-1">
-              Inversión especial de acceso
+              Lote 1 vigente · Primeros 50 alumnos
             </p>
             <div className="flex items-baseline justify-center gap-2.5">
               <span className="text-4xl sm:text-5xl font-extrabold text-[#64162D] tabular-nums">
@@ -268,7 +270,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             </p>
           </div>
 
-          <div className="flex justify-center mb-4">
+          <PricingTiers layout="compact" className="mb-6" />
+
+          <div className="flex justify-center">
             <PurchaseButton
               label="Quiero comenzar mi formación"
               variant="coral"
@@ -276,6 +280,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               onUnconfiguredCheckout={onUnconfiguredCheckout}
             />
           </div>
+
+          <ScarcityCounter
+            variant="light"
+            className="max-w-md mx-auto mt-3.5 mb-5"
+          />
 
           <p className="text-xs font-medium text-[#5A4F54] mb-7">
             Un solo pago <span aria-hidden="true">·</span> Acceso de por vida{' '}

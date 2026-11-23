@@ -1,6 +1,7 @@
 import React from 'react';
 import { siteConfig } from '../config/siteConfig';
 import { PurchaseButton } from './PurchaseButton';
+import { ScarcityCounter } from './ScarcityCounter';
 import { Reveal } from './Reveal';
 
 interface FinalCTAProps {
@@ -65,17 +66,21 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({
                 ·
               </span>
               <span className="text-[#DEC9A8] tabular-nums">
-                Inversión única: {siteConfig.offer.formattedPrice}
+                Inversión Lote 1: {siteConfig.offer.formattedPrice}
               </span>
             </div>
           </div>
 
-          {/* Coral Primary CTA */}
+          {/* Coral Primary CTA + Scarcity Counter */}
           <div className="mb-8">
             <PurchaseButton
               label="Quiero formarme en alta sastrería"
               variant="coral"
               onUnconfiguredCheckout={onUnconfiguredCheckout}
+            />
+            <ScarcityCounter
+              variant="dark"
+              className="max-w-md mx-auto mt-4"
             />
           </div>
 

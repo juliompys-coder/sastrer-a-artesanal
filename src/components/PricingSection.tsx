@@ -5,6 +5,8 @@ import { PRICING_BENEFITS } from '../data/courseContent';
 import { PurchaseButton } from './PurchaseButton';
 import { CountdownTimer } from './CountdownTimer';
 import { CurrencyConverter } from './CurrencyConverter';
+import { PricingTiers } from './PricingTiers';
+import { ScarcityCounter } from './ScarcityCounter';
 import { Reveal } from './Reveal';
 
 interface PricingSectionProps {
@@ -87,7 +89,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({
             <div className="bg-[#FCF6EC] text-[#342C30] border-2 border-[#DEC9A8] rounded-lg p-7 sm:p-9 shadow-xl">
               <div className="text-center pb-6 mb-6 border-b border-[#DEC9A8]">
                 <p className="text-xs font-bold tracking-[0.14em] uppercase text-[#9A7A4C] mb-2">
-                  Inversión especial de acceso
+                  Lote 1 vigente · Primeros 50 alumnos
                 </p>
 
                 <p className="text-5xl sm:text-6xl font-extrabold leading-none text-[#64162D] tabular-nums mb-2.5">
@@ -102,6 +104,8 @@ export const PricingSection: React.FC<PricingSectionProps> = ({
                   Por ambas especialidades y el Libro de Sastrería de cortesía.
                 </p>
               </div>
+
+              <PricingTiers layout="card" className="mb-6" />
 
               {/* Additional Benefits */}
               <div className="mb-7">
@@ -129,6 +133,8 @@ export const PricingSection: React.FC<PricingSectionProps> = ({
                 fullWidth
                 onUnconfiguredCheckout={onUnconfiguredCheckout}
               />
+
+              <ScarcityCounter variant="light" className="mt-3.5" />
 
               <CountdownTimer />
 

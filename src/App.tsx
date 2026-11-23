@@ -20,6 +20,7 @@ import { FAQSection } from './components/FAQSection';
 import { FinalCTA } from './components/FinalCTA';
 import { Footer } from './components/Footer';
 import { MobilePurchaseBar } from './components/MobilePurchaseBar';
+import { SocialProofToast } from './components/SocialProofToast';
 import { CheckoutConfigModal } from './components/CheckoutConfigModal';
 import { LegalModal } from './components/LegalModal';
 
@@ -93,6 +94,8 @@ export function App() {
         <MobilePurchaseBar
           onUnconfiguredCheckout={handleUnconfiguredCheckout}
         />
+
+        <SocialProofToast />
 
         <CheckoutConfigModal
           isOpen={checkoutModalOpen}
