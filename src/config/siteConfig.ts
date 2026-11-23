@@ -60,6 +60,10 @@ export const siteConfig = {
     label: 'Tiempo restante de esta oportunidad de acceso',
   },
 
+  tracking: {
+    metaPixelId: '983079787006620',
+  },
+
   contact: {
     /** Configura aquí tu correo real de soporte cuando publiques la página. */
     supportEmail: '',

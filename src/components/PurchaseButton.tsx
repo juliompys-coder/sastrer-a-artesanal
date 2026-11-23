@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { CHECKOUT_URL } from '../config/siteConfig';
+import { trackInitiateCheckout } from '../utils/metaTracking';
 
 interface PurchaseButtonProps {
   label: string;
@@ -30,12 +31,17 @@ export const PurchaseButton: React.FC<PurchaseButtonProps> = ({
     fullWidth ? 'w-full' : ''
   } ${variantClasses} ${className}`;
 
+  const handleTrackCheckout = () => {
+    trackInitiateCheckout();
+  };
+
   if (isConfigured) {
     return (
       <a
         href={CHECKOUT_URL.trim()}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={handleTrackCheckout}
         className={baseClasses}
       >
         <span>{label}</span>

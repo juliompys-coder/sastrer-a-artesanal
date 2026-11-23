@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { MotionConfig } from 'motion/react';
 import { LegalDocument } from './config/siteConfig';
+import { syncServerPageView } from './utils/metaTracking';
 import { Header } from './components/Header';
 import { HeroSection } from './components/HeroSection';
 import { CraftsmanshipSection } from './components/CraftsmanshipSection';
@@ -27,6 +28,10 @@ export function App() {
   const [activeLegalDoc, setActiveLegalDoc] = useState<LegalDocument | null>(
     null
   );
+
+  useEffect(() => {
+    syncServerPageView();
+  }, []);
 
   const handleUnconfiguredCheckout = () => {
     setCheckoutModalOpen(true);
