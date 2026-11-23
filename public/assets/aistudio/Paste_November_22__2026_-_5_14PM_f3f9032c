@@ -1,0 +1,1315 @@
+# PROMPT MAESTRO PARA GOOGLE AI STUDIO
+## CREACIÓN DE PÁGINA DE VENTAS — FORMACIÓN ESPECIALIZADA EN ALTA SASTRERÍA MASCULINA
+
+Quiero que actúes como un equipo de expertos integrado por:
+
+- Diseñador web senior especializado en marcas premium y de lujo.
+- Desarrollador frontend experto en React, TypeScript y Tailwind CSS.
+- Director de arte especializado en diseño editorial, moda masculina y sastrería bespoke.
+- Especialista en UX/UI, diseño responsive y experiencia móvil.
+- Copywriter especializado en venta directa, productos educativos y conversión.
+- Especialista en optimización de landing pages y rendimiento web.
+
+Tu misión es **DISEÑAR Y DESARROLLAR UNA PÁGINA DE VENTAS COMPLETA, ELEGANTE, PROFESIONAL, RESPONSIVE Y ORIENTADA A LA CONVERSIÓN**, destinada a comercializar una formación de alta sastrería masculina para todos los países de habla hispana.
+
+No quiero una maqueta incompleta, ni una página genérica, ni una explicación de cómo construirla.
+
+**QUIERO QUE CONSTRUYAS LA PÁGINA WEB FUNCIONAL, CON TODAS LAS SECCIONES, TEXTOS, ESTILOS, COMPONENTES Y ELEMENTOS VISUALES QUE SE DETALLAN EN ESTE PROMPT.**
+
+---
+
+# 1. PÁGINA DE REFERENCIA OBLIGATORIA
+
+Utiliza como referencia visual principal este sitio:
+
+https://sastreria-femenina.vercel.app/
+
+Antes de desarrollar la página, analiza la referencia e identifica:
+
+1. Tipografía de títulos y párrafos.
+2. Paleta cromática principal y secundaria.
+3. Estilo de los botones de compra.
+4. Fondos, degradados y contrastes.
+5. Diseño y distribución de las secciones.
+6. Jerarquía de títulos y subtítulos.
+7. Estilo de fotografías y presentaciones de producto.
+8. Espaciados y márgenes.
+9. Estilo de tarjetas y elementos informativos.
+10. Diseño para dispositivos móviles.
+11. Composición de la primera pantalla.
+12. Presentación visual del precio y los beneficios.
+
+**IMPORTANTE:**
+
+Quiero mantener una identidad visual coherente con esta referencia, pero crear una página original para cursos de ALTA SASTRERÍA MASCULINA.
+
+No copies los textos, imágenes, logotipos ni elementos protegidos de la otra página.
+
+Adapta únicamente los principios de diseño, la estética y la experiencia visual.
+
+Si no puedes acceder a la página, no inventes sus colores o fuentes exactos. En ese caso, crea un diseño premium inspirado en la sastrería clásica y utiliza las capturas que adjunte como referencia.
+
+Como alternativa visual, utiliza esta propuesta:
+
+- Verde oscuro profundo: #192820.
+- Verde secundario: #26382D.
+- Marfil elegante: #F6F2EA.
+- Dorado champagne: #CBAA75.
+- Gris cálido: #777870.
+- Blanco: #FFFFFF.
+- Texto principal oscuro: #222822.
+
+Para los títulos utiliza una tipografía serif refinada, por ejemplo Cormorant Garamond, Playfair Display o una alternativa semejante.
+
+Para párrafos, botones y navegación utiliza una tipografía sans-serif moderna y muy legible como Inter, DM Sans o similar.
+
+La prioridad es respetar la referencia visual si puedes analizarla.
+
+---
+
+# 2. CONCEPTO Y POSICIONAMIENTO COMERCIAL
+
+La página comercializará una formación especializada que contiene dos cursos:
+
+**ESPECIALIDAD I: SASTRERÍA ARTESANAL FULL CANVAS.**
+
+**ESPECIALIDAD II: SASTRERÍA SEMIARTESANAL.**
+
+Adicionalmente, se entrega:
+
+**UN LIBRO DE SASTRERÍA DE CORTESÍA.**
+
+El precio total es de **US$25**, un solo pago.
+
+Los estudiantes tendrán acceso de por vida a los videos.
+
+La formación está diseñada para aprender desde cero y no requiere experiencia previa en costura ni sastrería.
+
+También está dirigida a sastres y confeccionistas con experiencia que desean ampliar sus conocimientos.
+
+## Posicionamiento de marca
+
+No presentes esta formación como un conjunto de cursos económicos.
+
+Está terminantemente prohibido utilizar palabras como:
+
+- Pack.
+- Combo.
+- Supercombo.
+- Cursos baratos.
+- Liquidación.
+- Remate.
+- Superofertón.
+
+Quiero transmitir:
+
+- Alta sastrería.
+- Tradición artesanal.
+- Conocimiento especializado.
+- Precisión técnica.
+- Confección bespoke.
+- Elegancia masculina.
+- Formación profesional.
+- Calidad y maestría artesanal.
+- Accesibilidad al conocimiento.
+
+La marca debe percibirse como una academia especializada en un oficio de alta gama, sin afirmar acreditaciones o certificaciones inexistentes.
+
+Utiliza el término "bespoke" para referirte a las técnicas de confección personalizada y sastrería tradicional, sin afirmar que el curso otorga una certificación de maestro sastre.
+
+## Público objetivo internacional
+
+La página está dirigida a España, México, Colombia, Perú, Chile, Argentina, Ecuador, Bolivia, Centroamérica y demás países de habla hispana.
+
+Utiliza español internacional, natural y profesional.
+
+Emplea expresiones comprensibles en ambos mercados:
+
+- "Sacos, americanas o chaquetas de traje" en las primeras menciones.
+- "Patrones o moldes" cuando corresponda.
+- "Confección a medida".
+- "Clases en video".
+- "Toma de medidas".
+- "Entretelado".
+- "Montaje de mangas".
+- "Alta sastrería masculina".
+
+Después de aclarar los equivalentes regionales, utiliza principalmente "saco" y "chaqueta" de manera natural.
+
+Evita localismos excesivos y expresiones informales.
+
+---
+
+# 3. OBJETIVO DE LA PÁGINA
+
+La página debe conducir al usuario a una sola acción:
+
+**ACCEDER A LA FORMACIÓN COMPLETA POR US$25.**
+
+No quiero vender cada curso por separado.
+
+Toda la comunicación debe conducir a la adquisición conjunta de ambas especialidades y el libro de cortesía.
+
+Los botones de compra deben estar presentes estratégicamente:
+
+- En la primera pantalla.
+- Después de presentar las dos especialidades.
+- Después del video demostrativo.
+- En la sección de inversión.
+- Al final de la página.
+
+Todos los botones deben apuntar a la misma URL de checkout configurable.
+
+Utiliza una constante de configuración llamada CHECKOUT_URL.
+
+Mientras no se proporcione la URL de pago, muestra un estado de configuración claro durante desarrollo. No simules pagos ni inventes un enlace de compra.
+
+---
+
+# 4. DISEÑO DE LA PRIMERA PANTALLA — HERO SECTION
+
+Esta es la sección más importante de la página.
+
+Debe impresionar visualmente desde el primer momento.
+
+Utiliza una composición premium que muestre una chaqueta masculina de sastrería impecable y, de ser posible, un detalle real del proceso artesanal Full Canvas.
+
+En escritorio utiliza una composición editorial equilibrada, con texto y fotografía de gran calidad.
+
+En móvil reorganiza los elementos verticalmente sin reducir demasiado el tamaño de los titulares.
+
+### Encabezado superior
+
+Texto pequeño elegante:
+
+FORMACIÓN ESPECIALIZADA EN ALTA SASTRERÍA MASCULINA
+
+Texto secundario:
+
+EL ARTE DE LA CONFECCIÓN BESPOKE
+
+### Título principal
+
+**APRENDE EL ARTE DE CONFECCIONAR SACOS DE ALTA SASTRERÍA, INCLUSO SI COMIENZAS DESDE CERO.**
+
+Destaca tipográficamente "ALTA SASTRERÍA" y "DESDE CERO" sin abusar de diferentes colores.
+
+### Subtítulo
+
+Descubre las técnicas de Sastrería Artesanal Full Canvas y Sastrería Semiartesanal, desde la toma de medidas y el patronaje hasta la construcción del pecho, la colocación del cuello y las mangas y los acabados profesionales.
+
+Aprende mediante clases completas en video, explicadas paso a paso y disponibles para consultar a tu propio ritmo.
+
+### Beneficios inmediatos
+
+Mostrar mediante iconos finos y elegantes:
+
+- No necesitas experiencia previa.
+- Dos especialidades completas.
+- Acceso de por vida.
+- Libro de Sastrería de cortesía.
+- Pago único, sin mensualidades.
+
+### Precio
+
+Texto superior:
+
+INVERSIÓN ESPECIAL DE ACCESO
+
+Precio destacado:
+
+US$25
+
+Texto inferior:
+
+Ambas especialidades + Libro de Sastrería de cortesía.
+
+### Botón principal
+
+**QUIERO COMENZAR MI FORMACIÓN**
+
+Debajo del botón:
+
+Un solo pago · Acceso de por vida · Formación en español.
+
+No uses un contador regresivo ni afirmaciones de escasez que no estén verificadas.
+
+---
+
+# 5. SECCIÓN: EL ARTE DE LA ALTA SASTRERÍA
+
+Fondo marfil, amplios espacios y fotografías de detalles artesanales.
+
+Título:
+
+**LA ALTA SASTRERÍA ES MUCHO MÁS QUE UNA PRENDA BIEN CONFECCIONADA.**
+
+Texto:
+
+Detrás de un saco elegante existe mucho más que una tela bien cortada.
+
+Existe conocimiento, precisión, técnica y una tradición artesanal perfeccionada a lo largo de generaciones.
+
+La forma del pecho, el giro natural de las solapas, la construcción del cuello, la orientación de las mangas y la terminación de los ojales son detalles que marcan la diferencia.
+
+En la alta sastrería, cada pieza tiene una función y cada operación tiene una razón.
+
+Muchos de los conocimientos más importantes se encuentran en aquello que no se ve: la estructura interna de la prenda.
+
+Texto destacado:
+
+**LA EXCELENCIA DE UN SACO COMIENZA MUCHO ANTES DE LA ÚLTIMA PUNTADA.**
+
+Añade imágenes reales de estructuras de pecho, solapas y trabajos manuales.
+
+---
+
+# 6. SECCIÓN: APRENDE DESDE CERO
+
+Esta sección debe tener mucha relevancia porque elimina una de las principales objeciones de compra.
+
+Título:
+
+**¿NUNCA HAS CONFECCIONADO UN SACO? ESTA FORMACIÓN TAMBIÉN ES PARA TI.**
+
+Subtítulo:
+
+No necesitas experiencia previa en sastrería para comenzar.
+
+Texto:
+
+Esta formación ha sido preparada para que puedas estudiar las técnicas desde sus fundamentos, siguiendo procedimientos explicados paso a paso mediante videos.
+
+Comenzarás comprendiendo las medidas, las piezas del patrón, los materiales y las operaciones de confección.
+
+Progresivamente conocerás técnicas más especializadas utilizadas en la sastrería semiartesanal y en la construcción artesanal Full Canvas.
+
+Crea tres tarjetas visuales:
+
+### Tarjeta 1 — SI COMIENZAS DESDE CERO
+
+Aprenderás los fundamentos de las medidas, el patronaje, el corte y la confección de sacos.
+
+### Tarjeta 2 — SI YA SABES COSER
+
+Podrás ampliar tus conocimientos hacia la confección de prendas masculinas estructuradas y sus acabados.
+
+### Tarjeta 3 — SI YA ERES SASTRE
+
+Podrás profundizar en técnicas tradicionales, construcción Full Canvas y procedimientos semiartesanales.
+
+Frase destacada:
+
+**NO IMPORTA EN QUÉ ETAPA TE ENCUENTRES. LO IMPORTANTE ES TU DESEO DE APRENDER Y PERFECCIONAR TU TÉCNICA.**
+
+Evita prometer resultados profesionales inmediatos o dominio absoluto sin práctica.
+
+---
+
+# 7. SECCIÓN: DOS ESPECIALIDADES COMPLEMENTARIAS
+
+Esta sección debe introducir los dos cursos como dos disciplinas que forman una sola propuesta formativa.
+
+Título:
+
+**DOS ESPECIALIDADES. UNA FORMACIÓN EN ALTA SASTRERÍA.**
+
+Texto:
+
+Hemos reunido dos métodos de confección que te permitirán comprender diferentes formas de construir sacos, americanas y chaquetas de traje.
+
+La sastrería semiartesanal combina técnicas de confección y operaciones mecanizadas para desarrollar un proceso eficiente y preciso.
+
+La sastrería artesanal Full Canvas profundiza en la construcción interna flotante y el modelado tradicional de las prendas de alta gama.
+
+**No tienes que elegir entre aprender uno u otro método. Tendrás acceso a ambos.**
+
+Utiliza dos tarjetas grandes de diseño editorial, con fotografías reales y suficiente protagonismo para cada especialidad.
+
+---
+
+# 8. ESPECIALIDAD I: SASTRERÍA ARTESANAL FULL CANVAS
+
+Crear una sección amplia y visualmente destacada.
+
+Esta especialidad representa el aspecto más tradicional y artesanal de la formación.
+
+Utilizar fotografías de:
+
+- Entretela de cuerpo.
+- Crin de caballo.
+- Picado artesanal.
+- Solapas.
+- Cuello.
+- Mangas.
+- Ojales hechos a mano.
+- Saco terminado.
+
+Título:
+
+**SASTRERÍA ARTESANAL FULL CANVAS**
+
+Subtítulo:
+
+LA TRADICIÓN, LA ESTRUCTURA Y EL ARTE DE LA CONFECCIÓN A MEDIDA.
+
+Texto:
+
+En la sastrería artesanal, una parte esencial del trabajo se encuentra en el interior del saco.
+
+La construcción Full Canvas utiliza una estructura de entretelas flotantes que permite trabajar el pecho, modelar las solapas y construir la forma de la prenda mediante procedimientos tradicionales.
+
+En esta especialidad estudiarás los procesos de confección artesanal, desde las primeras medidas hasta las terminaciones.
+
+### Contenidos
+
+Crear 12 módulos o bloques de contenido:
+
+**01. Toma de medidas y análisis corporal**
+
+Procedimientos para obtener medidas y comprender la relación entre las proporciones del cuerpo y la construcción de la prenda.
+
+**02. Patronaje y trazado**
+
+Elaboración de patrones o moldes de las piezas principales.
+
+**03. Corte y preparación del tejido**
+
+Marcado, distribución, corte y preparación de los materiales.
+
+**04. Construcción Full Canvas**
+
+Preparación y ensamblaje de entretelas, refuerzos y componentes de la estructura interna.
+
+**05. Picado artesanal del pecho**
+
+Técnicas de puntadas y modelado de las capas estructurales.
+
+**06. Picado y construcción de solapas**
+
+Procedimientos para formar las solapas y conseguir un giro natural.
+
+**07. Confección de delanteros y espalda**
+
+Armado del cuerpo, bolsillos y piezas complementarias.
+
+**08. Confección y colocación del cuello**
+
+Preparación del cuello inferior y superior, modelado, asentamiento y montaje.
+
+**09. Confección de mangas**
+
+Trazado de mangas de dos piezas, construcción de copa y montaje en la sisa.
+
+**10. Ojales artesanales**
+
+Elaboración y acabado manual de ojales.
+
+**11. Colocación de botones**
+
+Técnicas de cosido, formación de pie de hilo y remates.
+
+**12. Planchado y acabados**
+
+Conformación del tejido, asentamiento de costuras y terminaciones.
+
+Cierre:
+
+**APRENDE A COMPRENDER LA ARQUITECTURA INTERIOR DE UN SACO DE ALTA SASTRERÍA.**
+
+Crear una galería con imágenes reales del proceso.
+
+---
+
+# 9. ESPECIALIDAD II: SASTRERÍA SEMIARTESANAL
+
+Esta sección debe ser igual de profesional y valiosa que la anterior.
+
+No presentes este método como inferior o de baja calidad.
+
+Título:
+
+**SASTRERÍA SEMIARTESANAL**
+
+Subtítulo:
+
+PRECISIÓN, TÉCNICA Y EFICIENCIA EN LA CONFECCIÓN DE SACOS.
+
+Texto:
+
+La sastrería semiartesanal combina conocimientos de confección tradicional con procedimientos mecanizados, permitiendo desarrollar procesos eficientes sin descuidar el patronaje, el montaje y los acabados.
+
+Esta especialidad complementa la construcción artesanal Full Canvas y permite estudiar otro enfoque de elaboración de sacos de vestir.
+
+### Contenidos
+
+**01. Toma de medidas**
+
+Procedimientos para registrar las dimensiones necesarias del cliente.
+
+**02. Patronaje y trazado**
+
+Elaboración y adaptación de patrones o moldes.
+
+**03. Corte de tejidos**
+
+Preparación, marcado, distribución y corte.
+
+**04. Entretelas**
+
+Selección, preparación y colocación de los elementos de soporte.
+
+**05. Construcción del delantero**
+
+Preparación y ensamblaje de la parte frontal del saco.
+
+**06. Confección de bolsillos y vistas**
+
+Técnicas de construcción y terminación.
+
+**07. Armado del cuerpo**
+
+Unión de delanteros, espalda, costados y hombros.
+
+**08. Confección del cuello**
+
+Trazado, preparación, montaje y terminación.
+
+**09. Confección y montaje de mangas**
+
+Elaboración de mangas de dos piezas, embebido de copa y colocación.
+
+**10. Costura a máquina**
+
+Procedimientos mecanizados de ensamblaje.
+
+**11. Ojales y botones**
+
+Confección mecanizada de ojales y técnicas de fijación de botones.
+
+**12. Forrado y terminación**
+
+Confección interior, planchado y revisión final de la prenda.
+
+Cierre:
+
+**AMPLÍA TUS CONOCIMIENTOS CON UN MÉTODO DE CONFECCIÓN QUE COMBINA TÉCNICA Y EFICIENCIA.**
+
+Incluir imágenes reales del proceso mecanizado y de los sacos terminados.
+
+---
+
+# 10. SECCIÓN COMPARATIVA
+
+Título:
+
+**DOS MÉTODOS QUE AMPLÍAN TU CONOCIMIENTO DEL OFICIO.**
+
+Crear una tabla comparativa elegante y responsive:
+
+Aspecto | Artesanal Full Canvas | Semiartesanal
+
+- Construcción interna: entretela flotante completa / sistemas simplificados o parciales según el método.
+- Trabajo del pecho: modelado artesanal / preparación y montaje con procedimientos combinados.
+- Solapas: picado tradicional / tratamiento manual o mecanizado.
+- Confección: mayor intervención artesanal / combinación de trabajo manual y a máquina.
+- Cuello: técnicas de construcción tradicional / montaje semimecanizado.
+- Mangas: construcción y ajuste especializado / confección y colocación mecanizada.
+- Ojales: técnicas manuales / métodos mecanizados.
+- Finalidad: profundizar en la tradición artesanal / conocer un método eficiente de confección.
+
+Cerrar con:
+
+**AMBOS MÉTODOS TIENEN ALGO EN COMÚN: LA IMPORTANCIA DE UN BUEN PATRONAJE, UN MONTAJE PRECISO Y ACABADOS CUIDADOS.**
+
+---
+
+# 11. SECCIÓN DE VIDEO DEMOSTRATIVO
+
+Título:
+
+**OBSERVA LA TÉCNICA. COMPRENDE EL PROCESO.**
+
+Subtítulo:
+
+UNA MIRADA AL INTERIOR DE LAS CLASES.
+
+Crear un reproductor de video de gran tamaño, con formato 16:9, portada atractiva y un botón de reproducción elegante.
+
+Este reproductor debe aceptar una URL configurable de video.
+
+No utilices videos ajenos como si pertenecieran a mis cursos.
+
+Si todavía no se ha proporcionado el video, muestra una portada provisional identificada claramente como demostración pendiente.
+
+Debajo del video:
+
+En esta presentación podrás observar fragmentos reales de los procesos que forman parte de la formación:
+
+- Toma de medidas.
+- Trazo de patrones.
+- Corte de tejidos.
+- Construcción de entretelas.
+- Picado Full Canvas.
+- Confección del cuello.
+- Montaje de mangas.
+- Ojales y botones.
+- Planchado y resultados finales.
+
+Frase:
+
+**DESCUBRE EL TRABAJO QUE SE ENCUENTRA DETRÁS DE CADA DETALLE.**
+
+Botón:
+
+**ACCEDER A LAS DOS ESPECIALIDADES**
+
+---
+
+# 12. SECCIÓN VISUAL: LOS DETALLES QUE MARCAN LA DIFERENCIA
+
+Crear una galería editorial de seis bloques con imágenes de alta calidad.
+
+Los bloques deben mostrar:
+
+### 1. PATRONAJE
+
+La precisión comienza con las medidas y la construcción del patrón.
+
+### 2. ESTRUCTURA INTERNA
+
+Comprende cómo las entretelas y los refuerzos contribuyen a la forma del saco.
+
+### 3. SOLAPAS
+
+Conoce las técnicas de construcción, picado y modelado.
+
+### 4. CUELLO
+
+Estudia los procedimientos para lograr un montaje correcto.
+
+### 5. MANGAS
+
+Comprende la forma de la copa, el aplomo y las técnicas de colocación.
+
+### 6. OJALES Y ACABADOS
+
+Observa los procedimientos de terminación que completan la prenda.
+
+Los bloques deben tener fotografías grandes y textos breves.
+
+En móvil deben convertirse en una galería vertical perfectamente legible.
+
+---
+
+# 13. SECCIÓN: ACCESO DE POR VIDA
+
+Título:
+
+**UNA FORMACIÓN QUE PODRÁS CONSULTAR DURANTE TODA TU VIDA.**
+
+Texto:
+
+Aprender sastrería requiere tiempo, observación y práctica.
+
+Es normal que algunos procedimientos deban estudiarse y repetirse varias veces antes de comprenderlos completamente.
+
+Por eso, las clases están disponibles en video con acceso de por vida.
+
+### Beneficios
+
+- Estudia desde casa o desde tu taller.
+- Organiza las clases según tus horarios.
+- Repite las explicaciones cuando lo necesites.
+- Detén los videos mientras realizas tus prácticas.
+- Vuelve a consultar un procedimiento durante la confección.
+- Avanza a tu propio ritmo.
+- Sin mensualidades ni pagos recurrentes.
+
+Frase destacada:
+
+**EL CONOCIMIENTO SE PERFECCIONA CON LA PRÁCTICA. POR ESO, TUS CLASES ESTARÁN DISPONIBLES PARA VOLVER A CONSULTARLAS.**
+
+---
+
+# 14. SECCIÓN DEL LIBRO DE CORTESÍA
+
+Esta sección debe parecer un obsequio elegante, no un regalo promocional barato.
+
+Utiliza una composición con la portada real del libro en perspectiva, sobre un fondo premium.
+
+Título pequeño:
+
+UN OBSEQUIO PARA COMPLEMENTAR TU APRENDIZAJE
+
+Título principal:
+
+**LIBRO DE SASTRERÍA DE CORTESÍA**
+
+Texto:
+
+La sastrería es un oficio en el que el estudio y la práctica se complementan.
+
+Por ello, junto con ambas especialidades recibirás un Libro de Sastrería como material adicional de consulta.
+
+Podrás utilizarlo para acompañar tus clases y continuar estudiando los conocimientos relacionados con este oficio.
+
+Destacar:
+
+**INCLUIDO SIN COSTE ADICIONAL.**
+
+El diseño debe permitir cargar la portada auténtica del libro.
+
+No inventes el título específico, la cantidad de páginas, el formato físico/digital ni su precio comercial.
+
+Configura estos datos para que puedan incorporarse posteriormente.
+
+---
+
+# 15. SECCIÓN: ¿A QUIÉN ESTÁ DIRIGIDA?
+
+Título:
+
+**UNA FORMACIÓN PARA QUIENES DESEAN APRENDER Y PERFECCIONAR EL ARTE DE LA SASTRERÍA.**
+
+Crear cinco tarjetas:
+
+**PRINCIPIANTES**
+
+Para quienes desean comenzar desde cero, incluso sin conocimientos previos de sastrería.
+
+**PERSONAS QUE YA SABEN COSER**
+
+Para quienes buscan ampliar sus conocimientos hacia la confección de sacos y chaquetas.
+
+**SASTRES Y CONFECCIONISTAS**
+
+Para profesionales que desean estudiar otros métodos de construcción y perfeccionar procedimientos.
+
+**ESTUDIANTES DE MODA Y DISEÑO**
+
+Para personas interesadas en el patronaje, la estructura interna y la confección.
+
+**EMPRENDEDORES**
+
+Para quienes desean desarrollar conocimientos que puedan aplicar en proyectos de confección especializada.
+
+Frase final:
+
+**NO NECESITAS EXPERIENCIA PREVIA PARA COMENZAR. NECESITAS INTERÉS POR APRENDER Y DISPOSICIÓN PARA PRACTICAR.**
+
+---
+
+# 16. SECCIÓN DE VALOR PROFESIONAL
+
+Título:
+
+**NO SE TRATA SOLAMENTE DE APRENDER A CONFECCIONAR UN SACO.**
+
+Subtítulo:
+
+SE TRATA DE COMPRENDER EL OFICIO DETRÁS DE SU CONSTRUCCIÓN.
+
+Texto:
+
+Imagina poder elaborar tus propios patrones.
+
+Comprender cómo se construye la estructura interna de un saco Full Canvas.
+
+Aprender los procedimientos de montaje del cuello y de las mangas.
+
+Conocer cómo se preparan los ojales artesanales.
+
+Identificar las diferencias entre la confección semiartesanal y el trabajo tradicional.
+
+Y disponer de videos que puedas volver a consultar mientras practicas.
+
+Estos conocimientos pueden ayudarte a desarrollar tus habilidades, perfeccionar tus trabajos y ampliar tus posibilidades dentro del mundo de la confección.
+
+**CADA TÉCNICA QUE APRENDES ES UN RECURSO MÁS PARA DESARROLLAR TU OFICIO.**
+
+No prometas ingresos garantizados, empleos asegurados ni resultados inmediatos.
+
+---
+
+# 17. SECCIÓN DE TESTIMONIOS
+
+Título:
+
+**LA EXPERIENCIA DE QUIENES HAN ESTUDIADO ESTAS TÉCNICAS.**
+
+Diseñar un carrusel de testimonios elegante y responsive.
+
+Cada tarjeta debe admitir:
+
+- Nombre del estudiante.
+- País.
+- Testimonio.
+- Fotografía, si existe autorización.
+- Imagen de una prenda confeccionada, si está disponible.
+
+MUY IMPORTANTE:
+
+No inventes testimonios, nombres, fotografías de alumnos ni resultados.
+
+Si no se proporcionan testimonios reales, no publiques tarjetas ficticias. Oculta esta sección en producción o mantenla únicamente como componente editable en desarrollo.
+
+---
+
+# 18. SECCIÓN DE INVERSIÓN — LA OFERTA PRINCIPAL
+
+Esta sección debe transmitir mucho valor.
+
+No utilices un diseño de supermercado o una gran cantidad de etiquetas promocionales.
+
+Fondo verde oscuro o negro elegante.
+
+Detalles dorados y tipografía premium.
+
+Título:
+
+**TU INVERSIÓN EN ALTA SASTRERÍA**
+
+Subtítulo:
+
+FORMACIÓN ESPECIALIZADA EN DOS MÉTODOS DE CONFECCIÓN.
+
+Mostrar claramente:
+
+### ESPECIALIDAD I
+
+SASTRERÍA ARTESANAL FULL CANVAS
+
+Técnicas tradicionales de patronaje, construcción interna, picado artesanal, montaje y acabados.
+
+### ESPECIALIDAD II
+
+SASTRERÍA SEMIARTESANAL
+
+Patronaje, corte, entretelado, confección, montaje de cuello y mangas y terminaciones profesionales.
+
+### MATERIAL COMPLEMENTARIO
+
+LIBRO DE SASTRERÍA DE CORTESÍA
+
+Incluido sin coste adicional.
+
+### BENEFICIOS ADICIONALES
+
+- Aprendizaje desde cero.
+- No requiere experiencia previa.
+- Clases completas en video.
+- Acceso de por vida.
+- Estudio a tu propio ritmo.
+- Formación en español.
+- Pago único.
+
+Texto de precio:
+
+**INVERSIÓN ESPECIAL DE ACCESO**
+
+### US$25
+
+Texto debajo:
+
+Por ambas especialidades y el Libro de Sastrería de cortesía.
+
+Botón principal:
+
+**SÍ, QUIERO COMENZAR MI FORMACIÓN**
+
+Debajo:
+
+Pago único · Sin mensualidades · Acceso de por vida.
+
+No inventes un precio anterior tachado.
+
+No uses falsos descuentos, plazas limitadas, temporizadores o cifras de estudiantes no verificadas.
+
+El precio debe sentirse como una oportunidad de acceso a una formación valiosa, no como una liquidación.
+
+---
+
+# 19. GALERÍA DE TRABAJOS REALES
+
+Crear una sección visual para presentar resultados.
+
+Título:
+
+**CONOCE LOS TRABAJOS Y PROCESOS DE ESTA FORMACIÓN.**
+
+La galería debe permitir mostrar:
+
+- Saco Full Canvas terminado.
+- Saco semiartesanal terminado.
+- Interior y estructura del pecho.
+- Picado de solapas.
+- Confección del cuello.
+- Montaje de manga.
+- Elaboración de ojales.
+- Terminaciones y botones.
+
+Hacer que las fotografías se abran en una vista ampliada.
+
+Incluir leyendas breves.
+
+No presentar fotografías genéricas como resultados reales de los estudiantes o del instructor.
+
+Si faltan imágenes, utiliza marcadores visuales elegantes que posteriormente puedan reemplazarse desde la configuración.
+
+---
+
+# 20. PREGUNTAS FRECUENTES
+
+Crear un acordeón elegante con apertura y cierre suaves.
+
+Incluir exactamente estas preguntas y respuestas:
+
+### ¿Necesito tener experiencia previa en sastrería?
+
+No. La formación está diseñada para que puedas comenzar desde cero, incluso si nunca has confeccionado un saco. Las clases te guiarán paso a paso por los procedimientos.
+
+### ¿Qué incluye la formación?
+
+Las dos especialidades completas: Sastrería Artesanal Full Canvas y Sastrería Semiartesanal, además del Libro de Sastrería de cortesía.
+
+### ¿Cuál es el precio de la formación completa?
+
+La inversión total es de US$25, por ambas especialidades y el material complementario.
+
+### ¿Debo pagar mensualidades?
+
+No. Realizas un solo pago.
+
+### ¿Por cuánto tiempo tendré acceso?
+
+El acceso a los videos es de por vida, de acuerdo con las condiciones de disponibilidad del servicio.
+
+### ¿Puedo repetir las clases?
+
+Sí. Puedes volver a consultar los videos para repasar cada procedimiento.
+
+### ¿Puedo estudiar desde España o Latinoamérica?
+
+La formación está dirigida al público hispanohablante y puede estudiarse desde los países donde se encuentren disponibles la plataforma y el sistema de pago.
+
+### ¿En qué idioma están las clases?
+
+Las clases están en español.
+
+### ¿Los cursos son presenciales?
+
+No. Son formaciones en video para estudiar de manera virtual.
+
+### ¿El Libro de Sastrería está incluido?
+
+Sí. Se entrega como material de cortesía, sin coste adicional.
+
+### ¿Cómo recibiré mi acceso después de pagar?
+
+Después de completar la compra, recibirás las instrucciones de acceso mediante el sistema de entrega configurado para la formación.
+
+### ¿Puedo estudiar aunque ya tenga experiencia?
+
+Sí. La formación está dirigida tanto a principiantes como a personas con experiencia que buscan ampliar o perfeccionar sus conocimientos.
+
+---
+
+# 21. SECCIÓN FINAL DE CIERRE
+
+Esta sección debe ser emocional, elegante y persuasiva, sin exageraciones.
+
+Fondo oscuro con imagen de un saco de alta sastrería.
+
+Título:
+
+**TODO GRAN OFICIO COMIENZA CON LA DECISIÓN DE APRENDER.**
+
+Texto:
+
+La sastrería reúne conocimientos que han sido transmitidos y perfeccionados durante generaciones.
+
+El patronaje, el corte, la construcción del pecho, el montaje del cuello, la colocación de las mangas, el trabajo de los ojales y los acabados forman parte de ese legado.
+
+Hoy tienes la oportunidad de estudiar dos métodos de confección mediante una formación que puedes comenzar desde cero.
+
+### TU FORMACIÓN INCLUYE:
+
+SASTRERÍA ARTESANAL FULL CANVAS
+
++
+
+SASTRERÍA SEMIARTESANAL
+
++
+
+LIBRO DE SASTRERÍA DE CORTESÍA
+
+### ACCESO DE POR VIDA
+
+### INVERSIÓN ÚNICA: US$25
+
+Botón:
+
+**QUIERO FORMARME EN ALTA SASTRERÍA**
+
+Frase final:
+
+**EL ARTE ESTÁ EN LA TÉCNICA. LA EXCELENCIA, EN CADA DETALLE.**
+
+---
+
+# 22. PIE DE PÁGINA
+
+Crear un footer profesional que incluya:
+
+- Nombre de la academia o marca editable.
+- Correo electrónico de contacto configurable.
+- Enlace a soporte.
+- Términos y condiciones.
+- Política de privacidad.
+- Política de devoluciones.
+- Condiciones del acceso de por vida.
+- Información de derechos de autor.
+
+No inventes datos de empresa, teléfonos, direcciones o políticas comerciales.
+
+Crea componentes y rutas preparadas para añadir estos contenidos.
+
+---
+
+# 23. EXPERIENCIA VISUAL Y UX
+
+La página debe sentirse como una publicación editorial de sastrería de lujo, pero con la claridad comercial de una buena landing page de respuesta directa.
+
+### Estilo general
+
+- Diseño refinado y moderno.
+- Fotografías grandes.
+- Espacios generosos.
+- Jerarquía tipográfica muy clara.
+- Animaciones discretas.
+- Iconografía minimalista.
+- Separadores elegantes.
+- Tarjetas cuidadosamente diseñadas.
+- Contraste visual adecuado.
+- Excelente legibilidad.
+
+### Animaciones
+
+Utiliza transiciones suaves al entrar en pantalla.
+
+Puedes incorporar:
+
+- Aparición gradual de títulos.
+- Desplazamientos muy sutiles.
+- Transición en tarjetas.
+- Hover elegante en botones.
+- Apertura suave de preguntas frecuentes.
+- Animaciones discretas en galería.
+
+No utilices animaciones excesivas, efectos llamativos o movimientos que distraigan de la compra.
+
+Respeta la preferencia del sistema "reduced motion".
+
+---
+
+# 24. DISEÑO MOBILE FIRST
+
+La página debe funcionar perfectamente en:
+
+- Teléfonos Android.
+- iPhone.
+- Tablets.
+- Ordenadores portátiles.
+- Pantallas de escritorio.
+
+En móviles:
+
+1. Utiliza una sola columna para los contenidos principales.
+2. Asegura que los titulares no se corten.
+3. Evita texto demasiado pequeño.
+4. Mantén las fotografías proporcionadas.
+5. Utiliza botones de compra grandes y fáciles de pulsar.
+6. El precio debe verse claramente.
+7. Mantén una navegación sencilla.
+8. Evita desplazamiento horizontal.
+9. Optimiza imágenes y videos.
+10. Mantén espacios cómodos entre elementos.
+
+### Botón fijo de compra en móvil
+
+Implementa una barra inferior discreta que aparezca después de que el usuario haya pasado la primera sección.
+
+Debe contener:
+
+US$25
+
+y un botón:
+
+ACCEDER AHORA
+
+Al pulsarlo, abrirá el checkout configurado.
+
+La barra no debe ocultar contenido importante, ni tapar los controles del navegador, ni aparecer sobre el pie de página cuando perjudique la lectura.
+
+---
+
+# 25. COMPONENTES Y FUNCIONALIDAD
+
+Desarrolla la página utilizando React, TypeScript y Tailwind CSS si están disponibles en el entorno.
+
+Organiza el proyecto con componentes reutilizables.
+
+Estructura sugerida:
+
+- Header
+- HeroSection
+- CraftsmanshipSection
+- BeginnersSection
+- SpecialtiesIntro
+- FullCanvasSection
+- SemiArtisanalSection
+- ComparisonSection
+- VideoPreview
+- CraftDetailsGallery
+- LifetimeAccessSection
+- ComplimentaryBook
+- AudienceSection
+- ProfessionalValue
+- Testimonials
+- PricingSection
+- WorkGallery
+- FAQSection
+- FinalCTA
+- Footer
+- MobilePurchaseBar
+
+Los nombres son orientativos; puedes optimizar la arquitectura.
+
+### Configuración central
+
+Crea un archivo o estructura de configuración donde se puedan modificar fácilmente:
+
+- Nombre de la marca.
+- Logo.
+- Precio.
+- Moneda.
+- URL de checkout.
+- Correo de soporte.
+- Imagen principal.
+- Fotografías de cada curso.
+- Videos de demostración.
+- Portada del libro.
+- Testimonios.
+- Enlaces legales.
+- Condiciones de acceso.
+
+El precio inicial será 25 y la moneda USD.
+
+No dejes valores importantes repartidos por múltiples archivos.
+
+### Botones de compra
+
+Todos deben usar la misma función o componente de compra.
+
+No implementes una pasarela de pagos propia ni recolectes datos de tarjetas.
+
+La compra se realizará mediante una plataforma externa segura cuyo enlace se incorporará posteriormente.
+
+Hasta configurar CHECKOUT_URL, muestra una indicación de configuración pendiente en el entorno de desarrollo y evita crear enlaces falsos.
+
+### Videos
+
+Permite utilizar:
+
+- URLs de YouTube.
+- URLs de Vimeo.
+- Archivos MP4 alojados de forma segura.
+
+Carga el reproductor únicamente cuando sea necesario para mejorar el rendimiento.
+
+No reproduzcas automáticamente videos con sonido.
+
+### Galería
+
+Implementa visualización ampliada, navegación y cierre accesible.
+
+### FAQ
+
+Permite abrir y cerrar preguntas mediante teclado, ratón o pantalla táctil.
+
+---
+
+# 26. SEO Y RENDIMIENTO
+
+Añade optimización técnica para buscadores:
+
+Título SEO:
+
+Alta Sastrería Masculina | Full Canvas y Semiartesanal desde Cero
+
+Meta descripción:
+
+Aprende Sastrería Artesanal Full Canvas y Semiartesanal con clases en video, paso a paso y sin experiencia previa. Dos especialidades, libro de cortesía y acceso de por vida por US$25.
+
+Palabras y conceptos relevantes:
+
+- Curso de sastrería.
+- Alta sastrería masculina.
+- Sastrería Full Canvas.
+- Sastrería artesanal.
+- Sastrería semiartesanal.
+- Confección de sacos.
+- Confección de americanas.
+- Confección de chaquetas de traje.
+- Patronaje masculino.
+- Curso de sastrería online.
+- Aprender sastrería desde cero.
+- Sastrería bespoke.
+
+Utiliza etiquetas semánticas y una jerarquía correcta de encabezados.
+
+Implementa Open Graph para compartir la página en redes sociales.
+
+Añade datos estructurados de curso y oferta únicamente con información verdadera y compatible con Schema.org.
+
+No inventes valoraciones, reseñas, certificaciones o estadísticas.
+
+Optimiza el rendimiento:
+
+- Imágenes WebP o AVIF.
+- Carga diferida para imágenes inferiores.
+- Tamaños responsive.
+- Evitar cambios bruscos de diseño.
+- Minimizar JavaScript innecesario.
+- Optimizar fuentes.
+- Buena velocidad de carga.
+
+---
+
+# 27. ACCESIBILIDAD Y CALIDAD
+
+La página debe ofrecer:
+
+- Contrastes adecuados.
+- Navegación con teclado.
+- Indicadores visibles de foco.
+- Textos alternativos para imágenes.
+- Botones reconocibles.
+- Formularios y controles correctamente etiquetados.
+- Buena lectura con tecnologías de asistencia.
+- Diseño compatible con móviles.
+
+Verifica que no existan errores de consola, enlaces rotos internos o componentes que no funcionen.
+
+---
+
+# 28. REGLAS IMPORTANTES DE COPYWRITING
+
+Toda la página debe transmitir valor.
+
+No utilices lenguaje de venta agresiva, presión artificial ni promesas exageradas.
+
+### Sí debes comunicar
+
+- Conocimiento especializado.
+- Aprendizaje desde cero.
+- Técnicas de alta sastrería.
+- Construcción artesanal Full Canvas.
+- Confección semiartesanal.
+- Dos especialidades complementarias.
+- Clases en video.
+- Acceso de por vida.
+- Libro de cortesía.
+- Inversión accesible.
+
+### No debes comunicar
+
+- Certificación oficial sin respaldo.
+- Título de maestro sastre garantizado.
+- Resultados profesionales inmediatos.
+- Ingresos garantizados.
+- Plazas limitadas inventadas.
+- Descuentos ficticios.
+- Testimonios falsos.
+- Cantidad de estudiantes no verificada.
+- Promesas de trabajo o empleo.
+- Servicios de soporte o tutorías que no se hayan confirmado.
+
+No reduzcas el contenido técnico de las especialidades a descripciones vagas.
+
+Los contenidos de patronaje, cuello, manga, entretelado, picado, ojales y botones deben estar claramente presentes.
+
+No utilices la palabra "pack" en los títulos, botones, tarjetas ni textos.
+
+No presentes la formación como una promoción de cursos baratos.
+
+---
+
+# 29. RESULTADO FINAL QUE ESPERO
+
+Quiero una landing page completamente desarrollada y lista para revisar, que tenga:
+
+1. Diseño visual premium inspirado en la referencia.
+2. Contenido comercial completo en español internacional.
+3. Una primera pantalla impactante.
+4. Las dos especialidades perfectamente explicadas.
+5. Énfasis claro en que no se requiere experiencia previa.
+6. Sección de videos demostrativos.
+7. Galerías para fotografías reales.
+8. Presentación elegante del Libro de Sastrería de cortesía.
+9. Sección de inversión por US$25.
+10. Botones de compra configurables.
+11. Preguntas frecuentes interactivas.
+12. Diseño responsive.
+13. Barra móvil de compra.
+14. SEO básico.
+15. Componentes reutilizables.
+16. Configuración sencilla de textos, medios y checkout.
+17. Rendimiento optimizado.
+18. Accesibilidad.
+19. Apartados legales configurables.
+20. Ausencia de contenido ficticio presentado como real.
+
+### Instrucción final
+
+**Construye la página web ahora.**
+
+No me entregues únicamente un plan, una explicación o fragmentos aislados.
+
+Genera los componentes, el diseño, los estilos y la estructura funcional completa utilizando todo el contenido especificado.
+
+Si faltan imágenes, videos, testimonios o enlaces, prepara espacios visuales elegantes y configurables, sin inventar evidencia comercial.
+
+Prioriza la calidad visual, la claridad de la oferta, la experiencia móvil y la conversión a compra.
+
+La página debe transmitir el prestigio de una formación en alta sastrería masculina y conseguir que el visitante comprenda el valor de aprender dos métodos de confección especializados por una inversión única de US$25.
+
+**IDENTIDAD DE MARCA:**
+
+ALTA SASTRERÍA MASCULINA
+
+**CONCEPTO:**
+
+EL ARTE DE LA CONFECCIÓN BESPOKE
+
+**PROMESA PRINCIPAL:**
+
+APRENDE DESDE CERO LAS TÉCNICAS DE SASTRERÍA ARTESANAL FULL CANVAS Y SASTRERÍA SEMIARTESANAL.
+
+**OFERTA:**
+
+DOS ESPECIALIDADES + LIBRO DE SASTRERÍA DE CORTESÍA.
+
+**INVERSIÓN:**
+
+US$25, PAGO ÚNICO.
+
+**BENEFICIO:**
+
+ACCESO DE POR VIDA.
+
+**FRASE FINAL DE MARCA:**
+
+EL ARTE ESTÁ EN LA TÉCNICA. LA EXCELENCIA, EN CADA DETALLE.

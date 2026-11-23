@@ -1,0 +1,8 @@
+{
+  "name": "Alta Sastrería Masculina",
+  "description": "Formación especializada en Alta Sastrería Masculina: Sastrería Artesanal Full Canvas y Sastrería Semiartesanal con clases en video, libro de cortesía y acceso de por vida.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

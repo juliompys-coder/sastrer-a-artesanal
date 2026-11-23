@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  --color-burgundy: #64162D;
+  --color-burgundy-dark: #4B0F21;
+  --color-burgundy-soft: #7B1E39;
+  --color-cream: #FCF6EC;
+  --color-cream-card: #FFFDF9;
+  --color-rose: #EAD5D7;
+  --color-rose-light: #F4E7E8;
+  --color-coral: #F05D3D;
+  --color-coral-hover: #D94C2D;
+  --color-beige-gold: #DEC9A8;
+  --color-beige-ink: #9A7A4C;
+  --color-charcoal: #342C30;
+  --color-charcoal-muted: #5A4F54;
+
+  --font-sans: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: var(--color-cream);
+    color: var(--color-charcoal);
+    overflow-x: clip;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    overflow-x: clip;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-sans);
+    text-wrap: balance;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-coral);
+    outline-offset: 3px;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Perspective book presentation */
+.book-stage {
+  perspective: 1400px;
+}
+
+.book-volume {
+  transform: rotateY(-16deg) rotateX(3deg);
+  transform-style: preserve-3d;
+  transition: transform 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.book-stage:hover .book-volume {
+  transform: rotateY(-9deg) rotateX(1deg) translateY(-4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .book-volume,
+  .book-stage:hover .book-volume {
+    transform: none;
+  }
+}
