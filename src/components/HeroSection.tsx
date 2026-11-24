@@ -1,15 +1,44 @@
 import React, { useState } from 'react';
-import { Check, Play, Film } from 'lucide-react';
+import {
+  BookOpen,
+  Check,
+  Film,
+  Globe,
+  Infinity as InfinityIcon,
+  Layers,
+  ListChecks,
+  PenTool,
+  Play,
+  Ruler,
+  Scissors,
+  Shirt,
+  Sparkles,
+} from 'lucide-react';
 import { siteConfig } from '../config/siteConfig';
-import { HERO_BENEFITS, VIDEO_PROCESS_LIST } from '../data/courseContent';
+import { HERO_BENEFITS, VIDEO_TECHNIQUES } from '../data/courseContent';
 import { PurchaseButton } from './PurchaseButton';
 import { EditorialImage } from './EditorialImage';
-import { PricingTiers } from './PricingTiers';
-import { ScarcityCounter } from './ScarcityCounter';
 
 interface HeroSectionProps {
   onUnconfiguredCheckout: () => void;
 }
+
+const HERO_BENEFIT_ICONS = [
+  Layers,
+  ListChecks,
+  BookOpen,
+  InfinityIcon,
+  Globe,
+];
+
+const TECHNIQUE_ICONS = [
+  Ruler,
+  Scissors,
+  Layers,
+  PenTool,
+  Shirt,
+  Sparkles,
+];
 
 type ParsedVideo =
   | { type: 'youtube'; embedUrl: string }
@@ -70,64 +99,115 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   };
 
   const containerAspectClass =
-    'relative w-full aspect-video min-h-[240px] sm:min-h-0 bg-[#1A080E]';
+    'relative w-full aspect-video min-h-[225px] sm:min-h-0 bg-[#1A080E]';
 
   return (
     <section
       id="inicio"
-      className="bg-[#FCF6EC] text-[#342C30] pt-10 pb-16 sm:pt-14 sm:pb-22 border-b border-[#DEC9A8]"
+      className="bg-[#FCF6EC] text-[#342C30] pt-6 pb-10 sm:pt-10 sm:pb-14 border-b border-[#DEC9A8] overflow-x-clip"
     >
-      <div className="max-w-[1150px] mx-auto px-5 sm:px-8">
-        {/* Centered Header Copy */}
+      <div className="max-w-[1150px] mx-auto px-4 sm:px-8">
+        {/* Sección 1: Portada, Beneficios Principales y Precio */}
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-xs sm:text-sm font-semibold tracking-[0.12em] uppercase text-[#9A7A4C] mb-2">
+          <p className="text-[11px] sm:text-xs font-semibold tracking-[0.12em] uppercase text-[#9A7A4C] mb-2">
             {siteConfig.brand.eyebrow} <span aria-hidden="true">·</span>{' '}
             {siteConfig.brand.concept}
           </p>
 
-          <h1 className="text-[2rem] leading-[1.12] sm:text-[2.75rem] lg:text-[3.35rem] font-extrabold tracking-[-0.025em] text-[#64162D] mb-5">
-            Aprende el arte de confeccionar sacos de{' '}
-            <span className="text-[#F05D3D]">Alta Sastrería</span>, incluso si
-            comienzas <span className="text-[#F05D3D]">desde cero</span>.
+          <h1 className="text-[1.75rem] leading-[1.14] sm:text-[2.55rem] lg:text-[3.05rem] font-extrabold tracking-[-0.025em] text-[#64162D] mb-3.5 sm:mb-4">
+            Aprende a confeccionar sacos de{' '}
+            <span className="text-[#F05D3D]">alta sastrería</span> desde cero,
+            paso a paso.
           </h1>
 
-          <div className="max-w-3xl mx-auto space-y-3 text-[15px] sm:text-base leading-[1.68] text-[#5A4F54] mb-9">
+          <div className="max-w-3xl mx-auto space-y-2 text-[14px] sm:text-[15.5px] leading-[1.6] text-[#5A4F54] mb-5 sm:mb-6">
             <p>
               Descubre las técnicas de Sastrería Artesanal Full Canvas y
-              Sastrería Semiartesanal, desde la toma de medidas y el patronaje
-              hasta la construcción del pecho, la colocación del cuello y las
-              mangas y los acabados profesionales.
+              Sastrería Semiartesanal mediante clases completas en video, desde
+              la toma de medidas y el patronaje hasta la confección y los
+              acabados profesionales.
             </p>
-            <p>
-              Aprende mediante clases completas en video, explicadas paso a paso
-              y disponibles para consultar a tu propio ritmo.
+            <p className="font-medium text-[#342C30]">
+              Aprende desde casa, a tu propio ritmo y sin necesidad de
+              experiencia previa.
             </p>
+          </div>
+
+          {/* Resumen de 5 Beneficios Clave */}
+          <ul
+            aria-label="Beneficios principales de la formación"
+            className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 sm:gap-x-5 sm:gap-y-2 py-3 sm:py-3.5 px-2.5 sm:px-4 mb-5 sm:mb-6 border-y border-[#DEC9A8]/85 bg-[#FFFDF9]/70 rounded-md text-xs sm:text-[13px] font-medium text-[#342C30]"
+          >
+            {HERO_BENEFITS.map((benefit, index) => {
+              const IconComponent = HERO_BENEFIT_ICONS[index] ?? Check;
+              return (
+                <li
+                  key={benefit}
+                  className="inline-flex items-center gap-1.5 sm:gap-2"
+                >
+                  <IconComponent
+                    className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#9A7A4C] shrink-0"
+                    strokeWidth={2}
+                    aria-hidden="true"
+                  />
+                  <span>{benefit}</span>
+                </li>
+              );
+            })}
+          </ul>
+
+          {/* Bloque de Precio y Botón Principal de Inscripción */}
+          <div className="max-w-2xl mx-auto mb-7 sm:mb-9">
+            <p className="text-[15px] sm:text-xl font-extrabold tracking-[0.03em] uppercase text-[#64162D] leading-snug mb-1">
+              Accede a toda la formación por{' '}
+              <span className="text-[#F05D3D] tabular-nums">
+                {siteConfig.offer.formattedPrice}
+              </span>
+            </p>
+
+            <p className="text-xs sm:text-sm font-medium text-[#5A4F54] mb-3.5 sm:mb-4">
+              Pago único <span aria-hidden="true">·</span> Sin mensualidades{' '}
+              <span aria-hidden="true">·</span> Acceso de por vida
+            </p>
+
+            <div className="flex justify-center">
+              <PurchaseButton
+                label="Quiero comenzar mi formación"
+                location="hero"
+                variant="coral"
+                className="w-full sm:w-auto sm:min-w-[360px] min-h-[52px] py-3.5 sm:py-4 text-[13.5px] sm:text-sm shadow-md"
+                onUnconfiguredCheckout={onUnconfiguredCheckout}
+              />
+            </div>
           </div>
         </div>
 
-        {/* Centerpiece Video Container with Burgundy Info Strip Above */}
+        {/* Sección 2: Video Demostrativo de las Clases */}
         <div
           id="demostracion"
-          className="-mx-3 sm:mx-auto max-w-[960px] rounded-lg overflow-hidden border border-[#DEC9A8] bg-[#FFFFFF] shadow-sm mb-9"
+          className="w-full max-w-[940px] mx-auto rounded-lg overflow-hidden border border-[#DEC9A8] bg-[#FFFFFF] shadow-sm scroll-mt-20"
         >
-          {/* Burgundy Informational Bar Above Video */}
-          <div className="bg-[#64162D] text-[#FFFFFF] px-3 py-2 sm:px-5 sm:py-3 text-center">
-            <p className="text-[11px] sm:text-sm font-semibold tracking-[0.02em] leading-snug">
-              <span className="block sm:inline text-[10px] sm:text-xs text-[#DEC9A8] uppercase tracking-[0.08em] sm:mr-2">
-                Una mirada al interior de las clases:
-              </span>
-              <span className="block sm:inline">
-                Observa la técnica. Comprende el proceso.
-              </span>
+          {/* Encabezado Burdeos Premium del Video */}
+          <div className="bg-[#64162D] text-[#FFFFFF] px-4 py-4 sm:px-8 sm:py-5 text-center border-b border-[#DEC9A8]/30">
+            <p className="inline-block text-[10px] sm:text-[11px] font-bold tracking-[0.16em] uppercase text-[#DEC9A8] border-b border-[#DEC9A8]/50 pb-1 mb-2">
+              Vista previa de la formación
+            </p>
+            <h2 className="text-base sm:text-2xl font-extrabold tracking-[-0.015em] text-[#FFFFFF] leading-snug">
+              Descubre cómo son las clases antes de inscribirte
+            </h2>
+            <p className="mt-1.5 text-xs sm:text-sm font-normal text-[#FCF6EC]/90 leading-relaxed max-w-2xl mx-auto">
+              Conoce por dentro nuestra formación y observa fragmentos reales de
+              los procedimientos de sastrería que estudiarás paso a paso.
             </p>
           </div>
 
-          {/* Responsive Video Player */}
+          {/* Reproductor de Video Responsive */}
           <div className={containerAspectClass}>
             {isPlaying && parsedVideo.type === 'youtube' && (
               <iframe
                 src={parsedVideo.embedUrl}
                 title={siteConfig.demoVideo.title}
+                loading="lazy"
                 className="absolute inset-0 w-full h-full border-0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -138,6 +218,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               <iframe
                 src={parsedVideo.embedUrl}
                 title={siteConfig.demoVideo.title}
+                loading="lazy"
                 className="absolute inset-0 w-full h-full border-0"
                 allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
@@ -227,87 +308,39 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             )}
           </div>
 
-          {/* Processes Observed in the Video */}
-          <div className="bg-[#FFFDF9] border-t border-[#DEC9A8] px-5 py-5 sm:px-7 sm:py-6">
-            <p className="text-xs sm:text-sm font-semibold text-[#64162D] mb-3.5 text-center">
-              En esta presentación podrás observar fragmentos reales de los
-              procesos que forman parte de la formación:
-            </p>
-            <ul className="grid grid-cols-1 sm:grid-cols-3 gap-x-5 gap-y-2 text-xs sm:text-sm text-[#5A4F54]">
-              {VIDEO_PROCESS_LIST.map((item) => (
-                <li key={item} className="flex items-start gap-2">
-                  <Check
-                    className="w-4 h-4 text-[#64162D] shrink-0 mt-0.5"
-                    strokeWidth={2.25}
-                    aria-hidden="true"
-                  />
-                  <span>{item}</span>
-                </li>
-              ))}
+          {/* Mensaje de Contexto + Cuadrícula Compacta de 6 Técnicas */}
+          <div className="bg-[#FFFDF9] border-t border-[#DEC9A8] px-4 py-4 sm:px-6 sm:py-5">
+            <h3 className="text-[15px] sm:text-lg font-extrabold tracking-[-0.015em] text-[#64162D] text-center mb-3.5 sm:mb-4">
+              Estas son algunas de las técnicas que aprenderás
+            </h3>
+
+            <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-3">
+              {VIDEO_TECHNIQUES.map((technique, index) => {
+                const TechIcon = TECHNIQUE_ICONS[index] ?? Check;
+                return (
+                  <li
+                    key={technique.id}
+                    className="flex items-start gap-2.5 rounded-md border border-[#DEC9A8]/85 bg-[#FCF6EC] p-3 text-left"
+                  >
+                    <span
+                      className="w-7 h-7 rounded-md bg-[#64162D] text-[#DEC9A8] inline-flex items-center justify-center shrink-0 mt-0.5"
+                      aria-hidden="true"
+                    >
+                      <TechIcon className="w-3.5 h-3.5" strokeWidth={1.9} />
+                    </span>
+                    <div className="min-w-0">
+                      <p className="text-[12.5px] sm:text-[13px] font-bold text-[#64162D] leading-snug">
+                        {technique.title}
+                      </p>
+                      <p className="mt-0.5 text-[11.5px] sm:text-xs leading-relaxed text-[#5A4F54]">
+                        {technique.description}
+                      </p>
+                    </div>
+                  </li>
+                );
+              })}
             </ul>
-            <p className="mt-4 pt-3.5 border-t border-[#DEC9A8]/60 text-center text-xs sm:text-sm font-semibold text-[#342C30]">
-              Descubre el trabajo que se encuentra detrás de cada detalle.
-            </p>
           </div>
-        </div>
-
-        {/* Centered Price + Batch Roadmap + Coral Primary CTA + Scarcity Counter Below Video */}
-        <div className="max-w-3xl mx-auto text-center">
-          <div className="mb-5">
-            <p className="text-xs font-bold tracking-[0.14em] uppercase text-[#9A7A4C] mb-1">
-              Lote 1 vigente · Primeros 50 alumnos
-            </p>
-            <div className="flex items-baseline justify-center gap-2.5">
-              <span className="text-4xl sm:text-5xl font-extrabold text-[#64162D] tabular-nums">
-                {siteConfig.offer.formattedPrice}
-              </span>
-              <span className="text-xs sm:text-sm font-semibold uppercase tracking-[0.06em] text-[#5A4F54]">
-                {siteConfig.offer.currency} · Pago único
-              </span>
-            </div>
-            <p className="mt-1.5 text-sm text-[#5A4F54]">
-              Ambas especialidades + Libro de Sastrería de cortesía.
-            </p>
-          </div>
-
-          <PricingTiers layout="compact" className="mb-6" />
-
-          <div className="flex justify-center">
-            <PurchaseButton
-              label="Quiero comenzar mi formación"
-              variant="coral"
-              className="w-full sm:w-auto sm:min-w-[340px]"
-              onUnconfiguredCheckout={onUnconfiguredCheckout}
-            />
-          </div>
-
-          <ScarcityCounter
-            variant="light"
-            className="max-w-md mx-auto mt-3.5 mb-5"
-          />
-
-          <p className="text-xs font-medium text-[#5A4F54] mb-7">
-            Un solo pago <span aria-hidden="true">·</span> Acceso de por vida{' '}
-            <span aria-hidden="true">·</span> Formación en español.
-          </p>
-
-          {/* Compact Summary of Immediate Benefits */}
-          <ul
-            aria-label="Beneficios principales de la formación"
-            className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2.5 pt-6 border-t border-[#DEC9A8] text-xs sm:text-sm font-medium text-[#342C30]"
-          >
-            {HERO_BENEFITS.map((benefit) => (
-              <li key={benefit} className="inline-flex items-center gap-2">
-                <span
-                  className="w-5 h-5 rounded-full bg-[#64162D] text-[#FFFFFF] inline-flex items-center justify-center shrink-0"
-                  aria-hidden="true"
-                >
-                  <Check className="w-3 h-3" strokeWidth={2.5} />
-                </span>
-                <span>{benefit}</span>
-              </li>
-            ))}
-          </ul>
         </div>
       </div>
     </section>

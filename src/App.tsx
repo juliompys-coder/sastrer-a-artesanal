@@ -4,23 +4,15 @@ import { LegalDocument } from './config/siteConfig';
 import { syncServerPageView } from './utils/metaTracking';
 import { Header } from './components/Header';
 import { HeroSection } from './components/HeroSection';
-import { CraftsmanshipSection } from './components/CraftsmanshipSection';
-import { FullCanvasSection } from './components/FullCanvasSection';
-import { SemiArtisanalSection } from './components/SemiArtisanalSection';
 import { SpecialtiesIntro } from './components/SpecialtiesIntro';
-import { ComparisonSection } from './components/ComparisonSection';
-import { CraftDetailsGallery } from './components/CraftDetailsGallery';
-import { ComplimentaryBook } from './components/ComplimentaryBook';
 import { LifetimeAccessSection } from './components/LifetimeAccessSection';
 import { WorkGallery } from './components/WorkGallery';
-import { AudienceSection } from './components/AudienceSection';
 import { Testimonials } from './components/Testimonials';
 import { PricingSection } from './components/PricingSection';
 import { FAQSection } from './components/FAQSection';
 import { FinalCTA } from './components/FinalCTA';
 import { Footer } from './components/Footer';
 import { MobilePurchaseBar } from './components/MobilePurchaseBar';
-import { SocialProofToast } from './components/SocialProofToast';
 import { CheckoutConfigModal } from './components/CheckoutConfigModal';
 import { LegalModal } from './components/LegalModal';
 
@@ -51,41 +43,28 @@ export function App() {
         <Header onUnconfiguredCheckout={handleUnconfiguredCheckout} />
 
         <main id="contenido-principal" className="flex-1">
-          {/* 1. Portada (Crema + Video protagonista) */}
+          {/* 1 y 2. Portada, beneficios, precio + Video demostrativo de las clases */}
           <HeroSection onUnconfiguredCheckout={handleUnconfiguredCheckout} />
 
-          {/* 2. Presentación de la técnica + Aprende desde cero (Burdeos) */}
-          <CraftsmanshipSection />
-
-          {/* 3. Contenido de los cursos en acordeones de 2 columnas (Rosa empolvado) */}
-          <FullCanvasSection />
-          <SemiArtisanalSection
+          {/* 3. Dos especialidades, 24 módulos desplegables y comparativa contraída */}
+          <SpecialtiesIntro
             onUnconfiguredCheckout={handleUnconfiguredCheckout}
           />
 
-          {/* 4. Qué recibirá el estudiante (Crema + Franja burdeos resumen + Galería) */}
-          <SpecialtiesIntro />
-          <ComparisonSection />
-          <CraftDetailsGallery />
-          <ComplimentaryBook />
+          {/* 4. Qué incluye la formación (4 beneficios, libro, cómo estudiar y 3 perfiles) */}
           <LifetimeAccessSection />
+
+          {/* 5. Galería fusionada de trabajos y procedimientos (4 iniciales + ver todos) */}
           <WorkGallery />
 
-          {/* 5. Para quién es la formación (Rosa empolvado) */}
-          <AudienceSection
-            onUnconfiguredCheckout={handleUnconfiguredCheckout}
-          />
-
-          {/* 6. Testimonios verificados (Crema — oculto hasta incorporar testimonios reales) */}
+          {/* Testimonios verificados (oculto automáticamente mientras no existan testimonios reales) */}
           <Testimonials />
 
-          {/* 7. Precio e inscripción (Burdeos + Tarjeta grande crema) */}
+          {/* 6. Oferta transparente e inscripción mediante Whop */}
           <PricingSection onUnconfiguredCheckout={handleUnconfiguredCheckout} />
 
-          {/* 8. Preguntas frecuentes (Rosa empolvado) */}
+          {/* 7. Preguntas frecuentes y cierre final */}
           <FAQSection />
-
-          {/* 9. Cierre final (Burdeos) */}
           <FinalCTA onUnconfiguredCheckout={handleUnconfiguredCheckout} />
         </main>
 
@@ -94,8 +73,6 @@ export function App() {
         <MobilePurchaseBar
           onUnconfiguredCheckout={handleUnconfiguredCheckout}
         />
-
-        <SocialProofToast />
 
         <CheckoutConfigModal
           isOpen={checkoutModalOpen}

@@ -1,20 +1,13 @@
 import React from 'react';
 import { Check } from 'lucide-react';
 import { AUDIENCE_PROFILES } from '../data/courseContent';
-import { PurchaseButton } from './PurchaseButton';
 import { Reveal } from './Reveal';
 
-interface AudienceSectionProps {
-  onUnconfiguredCheckout: () => void;
-}
-
-export const AudienceSection: React.FC<AudienceSectionProps> = ({
-  onUnconfiguredCheckout,
-}) => {
+export const AudienceSection: React.FC = () => {
   return (
     <section
       id="dirigido-a"
-      className="bg-[#EAD5D7] text-[#342C30] py-20 sm:py-26 border-b border-[#DEC9A8]"
+      className="bg-[#EAD5D7] text-[#342C30] py-20 sm:py-26 border-b border-[#DEC9A8] overflow-x-clip"
     >
       <div className="max-w-[1150px] mx-auto px-5 sm:px-8">
         <Reveal className="max-w-3xl mx-auto text-center mb-12 sm:mb-14">
@@ -28,7 +21,7 @@ export const AudienceSection: React.FC<AudienceSectionProps> = ({
         </Reveal>
 
         {/* Two-Column Cream Cards with Circular Burgundy Check Icons */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 mb-10 sm:mb-12">
           {AUDIENCE_PROFILES.map((profile, idx) => {
             const isLastOdd =
               idx === AUDIENCE_PROFILES.length - 1 &&
@@ -64,16 +57,10 @@ export const AudienceSection: React.FC<AudienceSectionProps> = ({
         </div>
 
         <Reveal className="max-w-3xl mx-auto text-center">
-          <p className="text-base sm:text-lg font-bold text-[#64162D] leading-snug mb-8">
+          <p className="text-base sm:text-lg font-bold text-[#64162D] leading-snug">
             No necesitas experiencia previa para comenzar. Necesitas interés por
             aprender y disposición para practicar.
           </p>
-
-          <PurchaseButton
-            label="Quiero comenzar mi formación"
-            variant="coral"
-            onUnconfiguredCheckout={onUnconfiguredCheckout}
-          />
         </Reveal>
       </div>
     </section>

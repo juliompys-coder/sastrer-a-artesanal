@@ -1,5 +1,15 @@
 import { siteConfig } from '../config/siteConfig';
 
+export type CheckoutButtonLocation =
+  | 'header'
+  | 'header_mobile'
+  | 'hero'
+  | 'after_curriculum'
+  | 'pre_offer'
+  | 'offer_card'
+  | 'final_cta'
+  | 'mobile_sticky_bar';
+
 declare global {
   interface Window {
     fbq?: (
@@ -8,11 +18,19 @@ declare global {
       params?: Record<string, unknown>,
       options?: { eventID?: string }
     ) => void;
+    gtag?: (
+      command: string,
+      eventName: string,
+      params?: Record<string, unknown>
+    ) => void;
+    dataLayer?: Array<Record<string, unknown>>;
     __META_PAGEVIEW_EVENT_ID__?: string;
   }
 }
 
 type SupportedMetaEvent = 'PageView' | 'InitiateCheckout';
+
+const PRODUCT_SLUG = 'alta_sastreria_masculina';
 
 function generateEventId(prefix: string): string {
   if (typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function') {
@@ -92,11 +110,20 @@ export function syncServerPageView(): void {
   sendServerEvent('PageView', eventId);
 }
 
-export function trackInitiateCheckout(): void {
+/**
+ * Registra únicamente el inicio de checkout (sin PII y sin disparar eventos Purchase)
+ * al hacer clic en los botones hacia Whop.
+ * - Meta Pixel + Conversions API: evento InitiateCheckout deduplicado mediante event_id.
+ * - GA4 / GTM (si está instalado): evento begin_checkout con parámetros no sensibles.
+ */
+export function trackInitiateCheckout(
+  buttonLocation?: CheckoutButtonLocation
+): void {
   if (typeof window === 'undefined') {
     return;
   }
   const eventId = generateEventId('ic');
+  const location = buttonLocation ?? 'offer_card';
 
   if (typeof window.fbq === 'function') {
     window.fbq(
@@ -106,10 +133,31 @@ export function trackInitiateCheckout(): void {
         value: siteConfig.offer.price,
         currency: siteConfig.offer.currency,
         content_name: siteConfig.brand.name,
+        content_ids: [PRODUCT_SLUG],
+        content_type: 'product',
+        button_location: location,
       },
       { eventID: eventId }
     );
   }
 
   sendServerEvent('InitiateCheckout', eventId);
+
+  const funnelParams = {
+    product: PRODUCT_SLUG,
+    value: siteConfig.offer.price,
+    currency: siteConfig.offer.currency,
+    button_location: location,
+  };
+
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', 'begin_checkout', funnelParams);
+  } else if (Array.isArray(window.dataLayer)) {
+    window.dataLayer.push({
+      event: 'begin_checkout',
+      ...funnelParams,
+    });
+  }
 }
+
+export const trackBeginCheckout = trackInitiateCheckout;

@@ -17,11 +17,11 @@ export interface FAQItem {
 }
 
 export const HERO_BENEFITS: string[] = [
-  'No necesitas experiencia previa.',
-  'Dos especialidades completas.',
-  'Acceso de por vida.',
+  '2 especialidades completas.',
+  '24 módulos técnicos en total.',
   'Libro de Sastrería de cortesía.',
-  'Pago único, sin mensualidades.',
+  'Acceso de por vida.',
+  'Clases 100 % en español.',
 ];
 
 export const BEGINNER_PATHS = [
@@ -230,6 +230,51 @@ export const VIDEO_PROCESS_LIST: string[] = [
   'Planchado y resultados finales.',
 ];
 
+export interface VideoTechniqueItem {
+  id: string;
+  title: string;
+  description: string;
+}
+
+export const VIDEO_TECHNIQUES: VideoTechniqueItem[] = [
+  {
+    id: 'medidas-patronaje',
+    title: 'Toma de medidas y patronaje.',
+    description:
+      'Proporciones corporales y trazado preciso de los moldes del saco.',
+  },
+  {
+    id: 'corte-tejidos',
+    title: 'Corte y preparación de tejidos.',
+    description:
+      'Marcado sobre la tela, distribución y preparación ordenada de piezas.',
+  },
+  {
+    id: 'entretelas-full-canvas',
+    title: 'Construcción de entretelas Full Canvas.',
+    description:
+      'Estructura interna flotante y picado artesanal para una caída natural.',
+  },
+  {
+    id: 'cuello-solapas',
+    title: 'Confección del cuello y las solapas.',
+    description:
+      'Modelado del quiebre, giro de solapa y asentamiento firme sobre la nuca.',
+  },
+  {
+    id: 'montaje-mangas',
+    title: 'Montaje y colocación de mangas.',
+    description:
+      'Distribución del embebido en la copa y aplomo exacto en la sisa.',
+  },
+  {
+    id: 'ojales-acabados',
+    title: 'Elaboración de ojales y acabados profesionales.',
+    description:
+      'Ojales precisos, fijación de botones, forrería y planchado final.',
+  },
+];
+
 export const LIFETIME_BENEFITS: string[] = [
   'Estudia desde casa o desde tu taller.',
   'Organiza las clases según tus horarios.',
@@ -285,70 +330,68 @@ export const PRICING_BENEFITS: string[] = [
 
 export const FAQ_ITEMS: FAQItem[] = [
   {
-    id: 'faq-experiencia',
-    question: '¿Necesito tener experiencia previa en sastrería?',
-    answer:
-      'No. La formación está diseñada para que puedas comenzar desde cero, incluso si nunca has confeccionado un saco. Las clases te guiarán paso a paso por los procedimientos.',
-  },
-  {
     id: 'faq-incluye',
-    question: '¿Qué incluye la formación?',
+    question: '¿Qué incluye exactamente la formación?',
     answer:
-      'Las dos especialidades completas: Sastrería Artesanal Full Canvas y Sastrería Semiartesanal, además del Libro de Sastrería de cortesía.',
-  },
-  {
-    id: 'faq-precio',
-    question: '¿Cuál es el precio de la formación completa?',
-    answer:
-      'La inversión total es de US$25, por ambas especialidades y el material complementario.',
+      'Incluye las dos especialidades completas: Sastrería Artesanal Full Canvas (12 módulos) y Sastrería Semiartesanal (12 módulos), clases completas en video, acceso de por vida y un Libro de Sastrería de cortesía.',
   },
   {
     id: 'faq-mensualidades',
-    question: '¿Debo pagar mensualidades?',
-    answer: 'No. Realizas un solo pago.',
+    question: '¿Debo pagar mensualidades o es un pago único?',
+    answer:
+      'Es un pago único de US$25 por las dos especialidades y el Libro de Sastrería de cortesía. No existen mensualidades ni pagos recurrentes.',
+  },
+  {
+    id: 'faq-como-pagar',
+    question: '¿Cómo puedo pagar?',
+    answer:
+      'El proceso de inscripción se realiza a través de Whop. Al continuar hacia el checkout podrás revisar el importe final y los métodos de pago disponibles para tu país antes de confirmar la compra.',
+  },
+  {
+    id: 'faq-dificultades-pago',
+    question: '¿Qué hago si tengo dificultades para pagar?',
+    answer:
+      'Si tu tarjeta o método de pago no es aceptado en Whop, verifica que tengas habilitadas las compras internacionales o en línea con tu banco, comprueba los datos ingresados o intenta con otro método de pago disponible dentro del mismo checkout de Whop.',
+  },
+  {
+    id: 'faq-entrega',
+    question: '¿Cómo recibo el acceso después de comprar?',
+    answer:
+      'Una vez completada tu inscripción en Whop, sigue las instrucciones proporcionadas por Whop y la plataforma del curso para ingresar a las clases en video y al Libro de Sastrería de cortesía.',
   },
   {
     id: 'faq-tiempo-acceso',
     question: '¿Por cuánto tiempo tendré acceso?',
     answer:
-      'El acceso a los videos es de por vida, de acuerdo con las condiciones de disponibilidad del servicio.',
+      'El acceso a las clases en video es de por vida, de acuerdo con las condiciones de disponibilidad de la plataforma, para que puedas consultar y repasar los procedimientos cuando lo necesites.',
+  },
+  {
+    id: 'faq-experiencia',
+    question: '¿Necesito tener experiencia previa en sastrería?',
+    answer:
+      'No necesitas experiencia previa. La formación está estructurada paso a paso para comenzar desde cero, y también es útil para personas que ya cosen o trabajan en confección y desean estudiar ambos métodos.',
+  },
+  {
+    id: 'faq-celular',
+    question: '¿Puedo estudiar desde mi celular?',
+    answer:
+      'Sí. Las clases son en video y se estudian de manera online, por lo que puedes verlas a tu propio ritmo desde tu celular, tableta o computadora con conexión a internet.',
   },
   {
     id: 'faq-repetir',
     question: '¿Puedo repetir las clases?',
-    answer: 'Sí. Puedes volver a consultar los videos para repasar cada procedimiento.',
+    answer:
+      'Sí. Puedes pausar, retroceder y repetir las explicaciones en video tantas veces como necesites mientras realizas tus prácticas.',
+  },
+  {
+    id: 'faq-idioma',
+    question: '¿En qué idioma están las clases?',
+    answer: 'Todas las clases de la formación están en español.',
   },
   {
     id: 'faq-paises',
     question: '¿Puedo estudiar desde España o Latinoamérica?',
     answer:
-      'La formación está dirigida al público hispanohablante y puede estudiarse desde los países donde se encuentren disponibles la plataforma y el sistema de pago.',
-  },
-  {
-    id: 'faq-idioma',
-    question: '¿En qué idioma están las clases?',
-    answer: 'Las clases están en español.',
-  },
-  {
-    id: 'faq-presencial',
-    question: '¿Los cursos son presenciales?',
-    answer: 'No. Son formaciones en video para estudiar de manera virtual.',
-  },
-  {
-    id: 'faq-libro',
-    question: '¿El Libro de Sastrería está incluido?',
-    answer: 'Sí. Se entrega como material de cortesía, sin coste adicional.',
-  },
-  {
-    id: 'faq-entrega',
-    question: '¿Cómo recibiré mi acceso después de pagar?',
-    answer:
-      'Después de completar la compra, recibirás las instrucciones de acceso mediante el sistema de entrega configurado para la formación.',
-  },
-  {
-    id: 'faq-con-experiencia',
-    question: '¿Puedo estudiar aunque ya tenga experiencia?',
-    answer:
-      'Sí. La formación está dirigida tanto a principiantes como a personas con experiencia que buscan ampliar o perfeccionar sus conocimientos.',
+      'Sí. La formación está dirigida al público hispanohablante y puede estudiarse de forma virtual desde cualquier país donde estén disponibles la plataforma y Whop.',
   },
 ];

@@ -9,8 +9,8 @@ interface HeaderProps {
 
 const NAV_LINKS = [
   { href: '#especialidades', label: 'Especialidades' },
-  { href: '#temario', label: 'Temario' },
   { href: '#que-recibiras', label: 'Qué incluye' },
+  { href: '#trabajos-reales', label: 'Galería' },
   { href: '#preguntas', label: 'Preguntas' },
 ];
 
@@ -58,6 +58,7 @@ export const Header: React.FC<HeaderProps> = ({ onUnconfiguredCheckout }) => {
           <div className="hidden sm:block">
             <PurchaseButton
               label={`Inscribirme · ${siteConfig.offer.formattedPrice}`}
+              location="header"
               variant="compact"
               onUnconfiguredCheckout={onUnconfiguredCheckout}
             />
@@ -112,6 +113,7 @@ export const Header: React.FC<HeaderProps> = ({ onUnconfiguredCheckout }) => {
           <div className="mt-5 pt-5 border-t border-[#DEC9A8] sm:hidden">
             <PurchaseButton
               label="Quiero comenzar mi formación"
+              location="header_mobile"
               variant="coral"
               fullWidth
               onUnconfiguredCheckout={() => {

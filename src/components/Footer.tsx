@@ -22,7 +22,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
   return (
     <footer
       id="footer-principal"
-      className="bg-[#4B0F21] text-[#FCF6EC]/85 py-14 sm:py-16 border-t border-[#DEC9A8]/25"
+      className="bg-[#4B0F21] text-[#FCF6EC]/85 pt-14 pb-18 sm:py-16 border-t border-[#DEC9A8]/25 overflow-x-clip"
     >
       <div className="max-w-[1150px] mx-auto px-5 sm:px-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-10 border-b border-[#DEC9A8]/20">
@@ -34,7 +34,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
             <p className="text-sm font-semibold text-[#DEC9A8] mb-3.5">
               {brand.concept}
             </p>
-            <p className="text-xs leading-relaxed text-[#FCF6EC]/70 max-w-sm">
+            <p className="text-xs leading-relaxed text-[#FCF6EC]/75 max-w-sm">
               Formación en video en español dedicada al estudio técnico de la
               Sastrería Artesanal Full Canvas y la Sastrería Semiartesanal.
             </p>
@@ -50,12 +50,12 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
                 {hasEmail ? (
                   <a
                     href={`mailto:${contact.supportEmail.trim()}`}
-                    className="hover:text-[#DEC9A8] transition-colors break-all"
+                    className="hover:text-[#DEC9A8] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#DEC9A8] rounded-xs transition-colors break-all"
                   >
                     {contact.supportEmail.trim()}
                   </a>
                 ) : (
-                  <span className="text-xs text-[#FCF6EC]/65">
+                  <span className="text-xs text-[#FCF6EC]/70">
                     Correo de contacto configurable en siteConfig.ts
                   </span>
                 )}
@@ -66,7 +66,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
                     href={contact.supportUrl.trim()}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-[#DEC9A8] transition-colors"
+                    className="hover:text-[#DEC9A8] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#DEC9A8] rounded-xs transition-colors"
                   >
                     Centro de soporte
                   </a>
@@ -74,7 +74,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
                   <button
                     type="button"
                     onClick={() => onOpenLegal(legalDocuments.refunds)}
-                    className="text-left hover:text-[#DEC9A8] transition-colors cursor-pointer"
+                    className="text-left hover:text-[#DEC9A8] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#DEC9A8] rounded-xs transition-colors cursor-pointer"
                   >
                     Soporte y atención al estudiante
                   </button>
@@ -94,7 +94,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
                   <button
                     type="button"
                     onClick={() => onOpenLegal(doc)}
-                    className="text-left hover:text-[#DEC9A8] transition-colors cursor-pointer"
+                    className="text-left hover:text-[#DEC9A8] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#DEC9A8] rounded-xs transition-colors cursor-pointer"
                   >
                     {doc.label}
                   </button>
