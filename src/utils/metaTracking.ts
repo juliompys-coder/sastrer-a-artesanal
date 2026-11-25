@@ -24,6 +24,9 @@ declare global {
       params?: Record<string, unknown>
     ) => void;
     dataLayer?: Array<Record<string, unknown>>;
+    whop?: {
+      track?: (eventName: string, params?: Record<string, unknown>) => void;
+    };
     __META_PAGEVIEW_EVENT_ID__?: string;
   }
 }
@@ -111,8 +114,9 @@ export function syncServerPageView(): void {
 }
 
 /**
- * Registra únicamente el inicio de checkout (sin PII y sin disparar eventos Purchase)
+ * Registra únicamente el inicio de checkout (sin PII y sin disparar eventos Purchase/Lead/CompleteRegistration)
  * al hacer clic en los botones hacia Whop.
+ * - Whop Pixel: evento personalizado click_checkout (protegido si window.whop no está disponible).
  * - Meta Pixel + Conversions API: evento InitiateCheckout deduplicado mediante event_id.
  * - GA4 / GTM (si está instalado): evento begin_checkout con parámetros no sensibles.
  */
@@ -124,6 +128,14 @@ export function trackInitiateCheckout(
   }
   const eventId = generateEventId('ic');
   const location = buttonLocation ?? 'offer_card';
+
+  try {
+    if (window.whop && typeof window.whop.track === 'function') {
+      window.whop.track('click_checkout');
+    }
+  } catch {
+    // Non-blocking: el enlace de compra debe seguir funcionando normalmente
+  }
 
   if (typeof window.fbq === 'function') {
     window.fbq(
